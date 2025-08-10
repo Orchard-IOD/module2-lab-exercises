@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mod2-Lab1</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="M2 Lab1 HTML investigation" />
+    <meta name="keywords" content="html, meta" />
+    <meta name="author" content="Orchard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- works like  <a href="/">Home</a>-->
+        <a href="index.html">Home</a>
+        <a href="form.html">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>My HTML learning journey</h1>
+
+      <article>
+        <h2>Learning elements - div, span, p, pre, ul, li, ol, article</h2>
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <span>span 1</span><span>span 2</span><span>span 3</span>
+        <p>p represents paragraph without preserving spacing</p>
+        <pre>
+        Text in         a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks
+        </pre>
+        <ul>
+          <li>ul li item 1</li>
+          <li>ul li item 2</li>
+          <li>ul li item 3</li>
+          <li>ul li item 4</li>
+        </ul>
+        <ol>
+          <li>ol li item 1</li>
+          <li>ol li item 2</li>
+          <li>
+            ol li item 3
+            <ul>
+              <li>nested ul li item 1</li>
+              <li>nested ul li item 2</li>
+            </ul>
+          </li>
+        </ol>
+      </article>
+
+      <article>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">First header - added colspan="2"</th>
+              <th>Second header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First cell - first row</td>
+              <td>Second cell - first row</td>
+              <td>Added missing Third cell - first row</td>
+            </tr>
+            <tr>
+              <td>First cell - second row</td>
+              <td rowspan="2">Second cell - second row <br>added rowspan="2"</td>
+              <td>Added Third cell - second row</td>
+            </tr>
+            <tr>
+              <td>First cell - Added third row</td>
+              <td>Second cell - Added third row <br> pushed over by R2C2 rowspan</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h2>HTML elements - img, video, audio</h2>
+        <img src="https://picsum.photos/400/400" alt="random image" width="200px" height="250px" />
+        <img src="./assets/html_lab_image.jpg" alt="mountain skies" width="200px" height="250px">
+        <video controls width="200px"> <source src="./assets/flower.webm" type="video/webm"> Sorry, your browser doesn't support embedded videos. </video>
+        <audio controls src="./assets/t-rex-roar.mp3"> Your browser does not support the <code>audio</code> element. </audio>
+      </article>
+    </main>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>

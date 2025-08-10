@@ -1,0 +1,339 @@
+/* I. Selectors */
+
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+/* 1.1 */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* 1.2 */
+.style-me1 {
+  color: red;
+}
+
+/* 1.3 */
+#style-me2 {
+  color: blue;
+}
+
+/* 1.4 */
+.style-me1#style-me2 {
+  color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+/* 2.1 */
+.my-descendants-are-styled p {
+  background-color: red;
+}
+
+/* 2.2 */
+.my-children-are-styled > p {
+  background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+
+.box {
+  /* 1.1 */
+  background-color: bisque;
+
+  /* 1.2 */
+  margin: 10px 5px 20px 15px;
+  margin: 20% 10%;
+  margin: 10rem;
+  margin: 10px;
+  padding: 5px 25px 20px 15px;
+  padding: 20% 10%;
+  padding: 10rem;
+  padding: 10px;
+
+  /* 2.1 */
+  height: 300px;
+  width: 450px;
+  height: 18rem;
+  width: 20rem;
+  height: 18em;
+  width: 20em;
+  height: 30%; /*does not have any effect as height not on parent element */
+  width: 50%;
+
+  /* 2.2 */
+  /* height: 300px !important;
+  width: 450px !important; */
+
+  /* 2.3 */
+  height: 50vh; /* resizes automatically with the browser window*/
+  width: 50vw; /* resizes automatically with the browser window*/
+
+  /* 3.1 */
+  border: 2px solid black;
+  border: 3px dashed green;
+  border: 4px dotted orange;
+
+  /* 3.2 */
+  border: 10px solid red;
+
+  /* 4.1 */
+  box-sizing: content-box; /* padding and border added to width and height -> 478 × 328 */
+  box-sizing: border-box; /* Content shrinks to include padding + border - fixed @ 450 x 300 */
+
+  /* 5.1 */
+  width: 300px;
+  height: 300px;
+
+  /* 5.2 */
+  overflow: visible; /* displays content that extends outside content + padding + border*/
+  overflow: auto; /* scrollable */
+  overflow: scroll; /* scrollbars are visible at all times */
+  overflow: hidden; /* removes content that extends outside of the elements boundaries (content + padding + border)*/
+
+  /* 6.1 */
+  outline: 10px solid green; /* does not effect .box size - fills in margin space*/
+
+  /* 7.1 */
+  border-radius: 2rem;
+  border-radius: 1em;
+  border-radius: 10px; /* padding and content still in box shape*/
+
+  /* 7.2 */
+  border-radius: 50%; /* border and outline affected - circular*/
+
+  /* 7.3 */
+  padding: 20px;
+
+  /* 8.1 */
+  height: 300px;
+  width: 450px;
+  border-radius: 20px;
+  background-image: url(./assets/images/img1.png);
+
+  /* 8.2 */
+  background-size: cover;
+
+  /* 8.3 */
+  background-size: 30px 45px;
+  background-repeat: repeat; /* tiles container tl to br*/
+  background-repeat: repeat-x; /* tiles a single row through the middle*/
+  background-repeat: repeat-y; /* tiles a single column through the middle */
+  background-repeat: round; /* similar affect as repeat*/
+  background-repeat: space; /* adds space around image*/
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* 8.4 */
+  background-position: center;
+  background-position: bottom; /*Aligns to the bottom edge */
+  background-position: initial; /*Aligns to the top left corner */
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+
+.position-absolute {
+  /* 1.1 */
+  position: absolute;
+
+  /* 1.2 */
+  /* bottom:0; */
+  top: 0;
+
+  /* 1.3 */
+  background-color: darkslategray;
+}
+
+.position-relative {
+  /* 2.1 */
+  position: relative;
+
+  /* 2.2 */
+  background-color: darkcyan;
+
+  /* 2.3 */
+  /* the .position-absolute div outside the .position-relative div is placed at top of page due to parent article not declared as relative */
+  /* the .position-absolute div inside the .position-relative div is placed at top left corner of the parent div because the parent div is declared as relative */
+}
+
+/* 2.4 */
+.position-absolute {
+  left: 0; /* .position-absolute divs placed at top left hand corner of parent div*/
+  left: 50px; /* .position-absolute divs placed 50px from the top left hand corner of parent div*/
+  right: 0; /* .position-absolute divs placed at top right hand corner of parent div*/
+  right: 50px; /* .position-absolute divs placed 50px from the top right hand corner of parent div*/
+  left: 0;
+}
+
+/* 3.1 */
+.position-sticky {
+  position: sticky;
+  /* 3.2 */
+  background-color: brown;
+  /* top: 150px; on scroll down stays 150px from the top of the page / browser */
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+/* 1 */
+.text-style {
+  color: darkgoldenrod;
+
+  /* 2 */
+  font-size: 10em;
+  font-size: 6rem;
+  font-size: 2%;
+  font-size: 20px;
+
+  /* 3 */
+  line-height: 10em;
+  line-height: 6rem;
+  line-height: 2%;
+  line-height: 20px;
+
+  /* 4 */
+  font-weight: 100;
+  font-weight: 200;
+  font-weight: 300;
+  font-weight: 400;
+  font-weight: 500;
+  font-weight: 600;
+  font-weight: 700;
+  font-weight: 800;
+  font-weight: 900;
+  font-weight: thin;
+  font-weight: normal;
+  font-weight: bold;
+  font-weight: lighter;
+  font-weight: bold;
+}
+
+/* 5.3 */
+/* Copied the stylesheet code into the <head> section of index.html. */
+
+/* 5.4 */
+.text-style {
+  color: red;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  color: green;
+  font-family: "Mozilla Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  color: brown;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  /* 1 */
+  text-align: center;
+  text-align: end;
+  text-align: justify;
+  text-align: right; /* similar to end*/
+  text-align: left;
+
+  /* 2 */
+  letter-spacing: 5px;
+  letter-spacing: 2cap;
+  letter-spacing: 0.2cm;
+  letter-spacing: 1ex;
+  letter-spacing: 1rem;
+  letter-spacing: 1%;
+  letter-spacing: normal;
+
+  /* 3 */
+  word-spacing: 15px;
+  word-spacing: 5cap;
+  word-spacing: 2cm;
+  word-spacing: 5ex;
+  word-spacing: 1rem;
+  word-spacing: normal;
+
+  /* 4 */
+  text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: lowercase;
+
+  /* 5 */
+  text-decoration: dashed; /* ??? */
+  text-decoration: line-through;
+  text-decoration: overline;
+  text-decoration: wavy; /* ??? */
+  text-decoration: solid; /* ??? */
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+/* 1.1 */
+a:link {
+  color: chocolate;
+
+  /* 1.2 */
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: overline;
+}
+
+/* 2.1&2.2 */
+a:hover {
+  color: darkred;
+  text-decoration: line-through;
+}
+
+a:active {
+  color: green;
+  text-decoration: double;
+}
+
+a:focus {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+/* 3.1 */
+a:visited {
+  color: gold;
+
+  /* 3,2 */
+  font-style: oblique;
+}
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+.calc-row {
+  display: flex;
+}
+
+/* 1 */
+.calc-style {
+  width: 100vw;
+
+  /* 1.1 */
+  background-color: bisque;
+
+  /* 1.2 */
+  width: calc(100vw - 100px);
+}
+
+/* 2 */
+.fixed-width-col {
+  width: 350px;
+  display: inline-block;
+}
+
+/* 3 */
+.fluid-col {
+  display: inline-block;
+
+  /* 3.1 */
+  width: calc(100vw - 350px);
+}

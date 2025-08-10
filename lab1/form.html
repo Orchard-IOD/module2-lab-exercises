@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- works like  <a href="/">Home</a>-->
+        <a href="index.html">Home</a>
+        <a href="form.html">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <form method="POST" action="http://localhost:3000/profile">
+        <div>
+          <label
+            >First name:
+            <input type="text" name="fName" />
+          </label>
+        </div>
+        <div>
+          <label
+            >Last name:
+            <input type="text" name="lName" />
+          </label>
+        </div>
+        <div>
+          <label
+            >JavaScript:
+            <input type="radio" name="language" value="JavaScript" />
+          </label>
+          <label
+            >Python:
+            <input type="radio" name="language" value="Python" />
+          </label>
+          <label
+            >C++
+            <input type="radio" name="language" value="C++" />
+          </label>
+        </div>
+        <div>
+          <label
+            >Car
+            <input type="checkbox" name="car" value="car" />
+          </label>
+          <label
+            >Motorbike
+            <input type="checkbox" name="motorbike" value="motorbike" />
+          </label>
+          <label
+            >Skateboard
+            <input type="checkbox" name="skateboard" value="skateboard" />
+          </label>
+        </div>
+        <div>
+          <label
+            >Brand of transport:
+            <select name="brand" id="brand">
+              <option value="mazarati">Mazarati</option>
+              <option value="mottoGuzzi">Motto Guzzi</option>
+              <option value="modus">Modus</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <button type="submit">Submit form</button>
+        </div>
+      </form>
+      <br><br>
+      <p><strong>Form screenshots from liveserver</strong></p>
+      <div>
+        <p><strong>Form Inputs maipulated in DevTools</strong></p>
+        <img src="./assets/form-screenshots/M2L1-VIII-devTools.png" alt="form inputs">
+      </div>
+      <div>
+        <p><strong>Form Inputs Submitted</strong></p>
+        <img src="./assets/form-screenshots/form5500.png" alt="form inputs">
+      </div>
+      <div>
+        <p><strong>data sent to localhost:3000 -> db.json</strong></p>
+        <img src="./assets/form-screenshots/server3000.png" alt="form inputs">
+      </div>
+    </main>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+/* initial css */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: purple;
+}
+.background-1 {
+  background: #68b0ab;
+}
+.background-2 {
+  background: #8fc0a9;
+}
+.background-3 {
+  background: #c8d5b9;
+}
+.background-4 {
+  background: #faf3dd;
+}
+.m-20 {
+  margin: 20px;
+}
+.h-80 {
+  min-height: 80px;
+}
+.h-400 {
+  height: 400px;
+}
+.w-80 {
+  width: 80px;
+}
+
+/* lab-3-flexbox css */
+/* ================= */
+
+/* 2.1 */
+.flex-container {
+  display: flex;
+}
+
+/* 2.2 */
+.flex-item-1 {
+  flex: 1;
+}
+.flex-item-2 {
+  flex: 2;
+}
+.flex-item-3 {
+  flex: 3;
+}
+.flex-item-4 {
+  flex: 4;
+}
+
+/* 2.3 */
+/* before adding flex to .flex-container - 4 block divs with margin 20px that collapses*/
+/* after adding flex to .flex-container in 2.1 the divs are not displayed but still exist in the container as 0x80 divs with margin 20px (h=120) against the container left edge*/
+/* after adding the required flex values to each div in 2.2 the divs are proportionally divided into .flex-container. As there are 10 portions each div is given 10%,20%,30%,40% respectively + margin*/
+
+/* 3.1 - 3.2*/
+.flex-center {
+  justify-content: center;
+  align-items: center;
+  /* centers child div in the exact middle of parent div */
+  justify-content: baseline;
+  align-items: center;
+  /* centers child div in the exact middle of parent div */
+  justify-content: baseline;
+  align-items: baseline;
+  /* aligns child div at top left corner of parent div */
+  justify-content: end;
+  align-items: end;
+  /* aligns child div at bottom right corner of parent div */
+  justify-content: last baseline;
+  align-items: last baseline;
+  /* same as end */
+  justify-content: space-around;
+  align-items: normal;
+  /* 80px col in centre of parent div */
+  justify-content: center;
+  align-items: baseline;
+  /* aligns child div in the centre of parent div top edge*/
+  justify-content: left;
+  align-items: center;
+  /* aligns child div in the centre of parent div left edge*/
+  justify-content: right;
+  align-items: center;
+  /* aligns child div in the centre of parent div right edge*/
+  justify-content: center;
+  align-items: flex-end;
+  /* aligns child div in the centre of parent div bottom edge*/
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4.1 */
+.flex-space-between {
+  /* by default both child divs of parent div are aligned next to each other on the parent's left edge */
+  justify-content: baseline;
+  /* as above keeps default settings */
+  justify-content: center;
+  /* centres both divs within the parent div */
+  justify-content: end;
+  justify-content: right;
+  /* aligns both divs next to each other on parent div right edge */
+  justify-content: start;
+  justify-content: left;
+  /* aligns both divs next to each other on parent div left edge */
+
+  /* 4.2 */
+  justify-content: space-between;
+}
+
+/* 5.1 */
+.flex-basis-item-50,
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-basis-item-50 {
+  flex-basis: 50%;
+}
+/*  flex-basis is set to 50% and flex-wrap is set to wrap on both parent and child divs. This produces 2 rows of 2 divs, with each div 50% width, to accommodate all child divs in order 1-2/3-4 - div1 top left, div4 bottom right*/
+
+/* 5.2 */
+.flex-basis-item-50,
+.flex-wrap {
+  flex-wrap: wrap-reverse;
+}
+/* wrap-reverse flips the rows to show child divs in order 3-4/1-2 - div3 top left, div2 bottom right*/
+
+/* 5.3 */
+.flex-basis-item-50 {
+  flex-basis: 25%;
+}
+/* even though wrap-reverse still relevent there are no rows to flip hence div order 1-2-3-4 */
+
+/* 6.1 */
+.flex-container {
+  flex-direction: column;
+  /* all default/row flex lost except centering div in 3, the nav in 7 shows links in column format*/
+  flex-direction: column-reverse;
+  /* reverses all divs in each section */
+  flex-direction: row;
+  /* all horizontal/row flex re-installed right to left*/
+  flex-direction: row-reverse;
+  /* flips all orders in rows */
+  flex-direction: initial;
+  /* to its initial (default) value, which is row */
+}
+
+/* 7.1 */
+.flex-menu {
+  padding: 0;
+  list-style: none;
+  gap: 2px;
+}
+
+.flex-menu li {
+  padding: 15px;
+}
+
+.flex-menu li a {
+  color: black;
+  font-weight: bold;
+}
+
+/* 7.2 */
+.flex-menu {
+  justify-content: right;
+}
+
+/* 7.3 */
+.flex-menu {
+  justify-content: center;
+}
+
+/* 7.4 */
+.fourth-item {
+  order: 5;
+}
+
+.fifth-item {
+  order: 4;
+}
+
+/* 7.5 */
+.flex-menu li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* 8 extra */
+.flex-grow-container {
+  display: flex;
+}
+.flex-grow-container div {
+  width: 80px;
+}
+/* .flex-grow-container = 940 x 80 */
+/* each child div = 80 x 80  */
+/* remaing space in div = 940 - 160 = 780 */
+
+.x {
+  flex-grow: 1;
+}
+.y {
+  flex-grow: 2;
+}
+
+/* remaing space is divided proptionaly to each div 1:2 */
+/* 780 / 3 = 260 */
+/* div.x = 80 + 260 = 340 */
+/* div.y = 80 + 520 = 600 */
+
+.x {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.y {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+/* flex-basis: 0 for both child div */
+/* entire parent div width dived into 3 equal portions = 940 / 3 = 313.33*/
+/* flex-grow ratio 1:2 */
+/* div.x = 313.33 x 80 */
+/* div.y = 626.67 x 80 */
